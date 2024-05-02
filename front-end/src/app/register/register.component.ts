@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -12,7 +13,7 @@ export class RegisterComponent {
   email: String = "";
   password: String = "";
 
-  constructor(private http: HttpClient)
+  constructor(private http: HttpClient, private router: Router)
   {
 
   }
@@ -27,6 +28,7 @@ export class RegisterComponent {
     {
       console.log(resultData);
       alert("Employee Registred Successfully");
+      this.router.navigateByUrl("/welcome");
     });
   }
 

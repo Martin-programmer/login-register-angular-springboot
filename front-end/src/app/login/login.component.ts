@@ -27,7 +27,7 @@ export class LoginComponent {
       if(resultData.message == "Email not exits") {
         alert("Email not exists");
       } else if(resultData.message == "Login Success") {
-        this.router.navigateByUrl("/home");
+        this.router.navigateByUrl("/welcome");
       } else {
         alert("Incorrect Email and Password not match");
       }
